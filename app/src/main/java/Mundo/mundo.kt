@@ -1,6 +1,7 @@
 package Mundo
 
 data class UbicacionGeografica (var calle: Int, var carrera: Int) : Comparable<UbicacionGeografica> {
+
     override fun compareTo(other: UbicacionGeografica): Int {
         if (this.calle > other.calle)
             return 1
@@ -13,6 +14,25 @@ data class UbicacionGeografica (var calle: Int, var carrera: Int) : Comparable<U
         else
             return 0
     }
+
 }
 
+data class Accidentado (var nombre: String) : Comparable<Accidentado> {
 
+    override fun compareTo(other: Accidentado): Int {
+        if (this.nombre > other.nombre)
+            return 1
+        else if (other.nombre > this.nombre)
+            return -1
+        else return 0
+    }
+
+}
+
+data class Ambulancia (var) {
+
+    fun ingresar_accidentado(accidentado: Accidentado) {
+
+    }
+
+}
