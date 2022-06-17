@@ -14,5 +14,3 @@ data class UbicacionGeografica (var calle: Int, var carrera: Int) : Comparable<U
             return 0
     }
 }
-
-
