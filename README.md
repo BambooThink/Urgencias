@@ -1,2 +1,2 @@
 # :dart: Sistema de Información para Urgencias - Android
-Creación de un sistema de información para urgencias.
+Taller que consiste en la creación de un sistema de información para urgencias.
