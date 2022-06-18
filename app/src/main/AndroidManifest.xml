@@ -22,10 +22,10 @@
             android:name=".ActualizarAmbulancia"
             android:exported="false" />
         <activity
-            android:name=".IngresarNuevoHospital"
+            android:name=".NuevoHospital"
             android:exported="false" />
         <activity
-            android:name=".IngresarNuevaAmbulancia"
+            android:name=".NuevaAmbulancia"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
