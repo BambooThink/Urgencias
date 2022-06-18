@@ -17,7 +17,7 @@ class SistemaUrgencias {
 
         fun agregar_hospital(var codigo: Int, var nombre: String, var calle: Int, var carrera: String, var accidente1: String, var accidente2: String) {
             if (lista_hospitales.filter { it.codigo.equals(codigo) }.isEmpty)
-                TODO()
+                lista_hospitales.add(Hospital(codigo))
         }
 
         fun ocurrio_accidente(var accidentado: Accidentado, var calle: Int, var carrera: Int) {
