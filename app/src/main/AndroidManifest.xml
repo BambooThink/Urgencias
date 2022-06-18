@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Urgencias">
         <activity
+            android:name=".DarAltaAccidentado"
+            android:exported="false" />
+        <activity
+            android:name=".LlevarAccidentadoHospital"
+            android:exported="false" />
+        <activity
+            android:name=".InformarAccidente"
+            android:exported="false" />
+        <activity
+            android:name=".ActualizarAmbulancia"
+            android:exported="false" />
+        <activity
             android:name=".IngresarNuevoHospital"
             android:exported="false" />
         <activity

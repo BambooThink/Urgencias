@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IngresarNuevoHospital">
+    tools:context=".ActualizarAmbulancia">
 
     <LinearLayout
         android:layout_width="372dp"
@@ -17,10 +17,10 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView_titulo_punto2"
+            android:id="@+id/textView_titulo_punto3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ingresar Nuevo Hospital"
+            android:text="Actualizar Ambulancia"
             android:textSize="24sp" />
 
         <Space
@@ -28,7 +28,7 @@
             android:layout_height="35dp" />
 
         <EditText
-            android:id="@+id/editTextNumber_codigo_punto2"
+            android:id="@+id/editTextNumber_codigo_punto3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -36,15 +36,7 @@
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editTextNumber_nombre_punto2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Nombre"
-            android:inputType="number" />
-
-        <EditText
-            android:id="@+id/editTextNumber_calle_punto2"
+            android:id="@+id/editTextNumber_calle_punto3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -52,31 +44,15 @@
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editTextNumber_carrera_punto2"
+            android:id="@+id/editTextNumber_carrera_punto3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Carrera"
             android:inputType="number" />
 
-        <EditText
-            android:id="@+id/editText_accidente1_punto2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Accidente 1"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:id="@+id/editText_accidente2_punto2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Accidente 2"
-            android:inputType="textPersonName" />
-
         <Button
-            android:id="@+id/button_enviar_punto2"
+            android:id="@+id/button_enviar_punto3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enviar" />

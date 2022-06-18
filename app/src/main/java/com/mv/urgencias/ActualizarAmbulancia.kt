@@ -3,9 +3,9 @@ package com.mv.urgencias
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class IngresarNuevaAmbulancia : AppCompatActivity() {
+class ActualizarAmbulancia : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ingresar_nueva_ambulancia)
+        setContentView(R.layout.activity_actualizar_ambulancia)
     }
 }
