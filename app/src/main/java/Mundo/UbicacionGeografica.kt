@@ -1,6 +1,6 @@
 package Mundo
 
-data class UbicacionGeografica (var calle: Int, var carrera: Int) : Comparable<UbicacionGeografica> {
+data class UbicacionGeografica (private var calle: Int, private var carrera: Int) : Comparable<UbicacionGeografica> {
 
     override fun compareTo(other: UbicacionGeografica): Int {
         if (this.calle > other.calle)
