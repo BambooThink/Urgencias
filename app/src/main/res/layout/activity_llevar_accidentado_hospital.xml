@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView_nombre_punto4"
+            android:id="@+id/textView_nombre_punto5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Llevar Accidentado a un Hospital"
@@ -49,10 +49,16 @@
             android:layout_height="35dp" />
 
         <Button
-            android:id="@+id/button_enviar_punto2"
+            android:id="@+id/button_enviar_punto5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enviar" />
+
+        <Button
+            android:id="@+id/button_regresar_punto5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Regresar al Menú" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

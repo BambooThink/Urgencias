@@ -60,10 +60,16 @@
             android:inputType="number" />
 
         <Button
-            android:id="@+id/button_enviar_punto2"
+            android:id="@+id/button_enviar_punto4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enviar" />
+
+        <Button
+            android:id="@+id/button_regresar_punto4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Regresar al Menú" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
