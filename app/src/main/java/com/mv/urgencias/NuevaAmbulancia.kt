@@ -1,5 +1,6 @@
 package com.mv.urgencias
 
+import Mundo.SistemaUrgencias
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,7 +21,8 @@ class NuevaAmbulancia : AppCompatActivity() {
 
         botonEnviar.setOnClickListener{
             try {
-
+                SistemaUrgencias.agregar_ambulancia(codigoAmbulancia.text.toString().toInt(),
+                    calle.text.toString().toInt(), carrera.text.toString().toInt())
                 Toast.makeText(this, "Se creó la ambulancia", Toast.LENGTH_LONG).show()
             } catch (e: Exception) {
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()

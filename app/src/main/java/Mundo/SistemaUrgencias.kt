@@ -12,12 +12,15 @@ class SistemaUrgencias {
 
         fun agregar_ambulancia(codigo: Int, calle: Int, carrera: Int) {
             if (lista_ambulancias.filter { it.codigo.equals(codigo) }.isEmpty)
-                lista_ambulancias.add(Ambulancia(codigo, null, "LIBRE", UbicacionGeografica(calle, carrera)))
+                lista_ambulancias.add(Ambulancia(codigo, null, "LIBRE",
+                    UbicacionGeografica(calle, carrera)))
         }
 
-        fun agregar_hospital(codigo: Int, nombre: String, calle: Int, carrera: Int, accidente1: String, accidente2: String) {
+        fun agregar_hospital(codigo: Int, nombre: String, calle: Int, carrera: Int, accidente1: String,
+                             accidente2: String) {
             if (lista_hospitales.filter { it.codigo.equals(codigo) }.isEmpty)
-                lista_hospitales.add(Hospital(codigo, nombre, UbicacionGeografica(calle, carrera), accidente1, accidente2))
+                lista_hospitales.add(Hospital(codigo, nombre, UbicacionGeografica(calle, carrera), accidente1,
+                    accidente2))
         }
 
         fun ocurrio_accidente(accidentado: Accidentado, calle: Int, carrera: Int): Ambulancia? {
