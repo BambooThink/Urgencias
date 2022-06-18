@@ -7,8 +7,8 @@ class SistemaUrgencias {
 
     companion object {
 
-        var lista_ambulancias: TArrayList<Ambulancia>()
-        var lista_hospitales: TArrayList<Hospital>()
+        var lista_ambulancias: TArrayList<Ambulancia> = TArrayList()
+        var lista_hospitales: TArrayList<Hospital> = TArrayList()
 
         fun agregar_ambulancia(codigo: Int, calle: Int, carrera: Int) {
             if (lista_ambulancias.filter { it.codigo.equals(codigo) }.isEmpty)
@@ -26,7 +26,19 @@ class SistemaUrgencias {
                 .min()
         }
 
+        fun llegada_ambulancia_hospital(ambulancia: Ambulancia) {
+            if (ambulancia.estado.equals("OCUPADA")) {
+                var hospital = lista_hospitales.find { it.consultarAccidente(ambulancia.accidentado!!.accidente) }
+                ambulancia.desocupar()
+                ambulancia.cambiar_ubicacion(hospital!!.ubicacion)
+                hospital.addPaciente(ambulancia.accidentado!!.nombre)
+            }
+        }
 
+        fun dar_alta_accidentado(codigoHospital: Int, nombrePaciente: String) {
+            var hospital = lista_hospitales.find { it.codigo == codigoHospital }
+            hospital!!.darAltaPaciente(nombrePaciente)
+        }
 
     }
 
