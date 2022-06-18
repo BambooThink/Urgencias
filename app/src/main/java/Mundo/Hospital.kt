@@ -18,8 +18,8 @@ data class Hospital (var codigo: Int, var nombre: String, var ubicacion: Ubicaci
     }
 
     override fun compareTo(other: Hospital): Int {
-        if (this.codigo == other.codigo) return 1
-        else return 0
+        if (this.codigo > other.codigo) return 1
+        else return -1
     }
 
     fun consultarPaciente(nombrePaciente: String): Boolean {
