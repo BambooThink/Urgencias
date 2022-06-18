@@ -36,13 +36,13 @@
                 android:id="@+id/button_1_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ingresar Info Ambulancia" />
+                android:text="Ingresar Nueva Ambulancia" />
 
             <Button
                 android:id="@+id/button_2_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ingresar Info Hospital" />
+                android:text="Ingresar Nuevo Hospital" />
 
             <Button
                 android:id="@+id/button_3_main"
@@ -60,13 +60,13 @@
                 android:id="@+id/button_5_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Llevar Accidentado a Hospital" />
+                android:text="Llevar Accidentado a un Hospital" />
 
             <Button
                 android:id="@+id/button_6_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dar de Alta un Accidentado" />
+                android:text="Dar de Alta a un Accidentado" />
 
             <Button
                 android:id="@+id/button_7_main"
@@ -96,13 +96,13 @@
                 android:id="@+id/button_11_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mostrar todas las ambulancias ocupadas" />
+                android:text="Mostrar Todas las ambulancias ocupadas" />
 
             <Button
                 android:id="@+id/button_12_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mostrar la info de un hospital" />
+                android:text="Mostrar info de un hospital" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
