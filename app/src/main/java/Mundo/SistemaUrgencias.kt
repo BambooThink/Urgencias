@@ -61,6 +61,20 @@ class SistemaUrgencias {
 
         }
 
+        fun llegada_ambulancia_hospital(ambulancia: Ambulancia) {
+            if (ambulancia.estado.equals("OCUPADA")) {
+                var hospital = lista_hospitales.find { it.consultarAccidente(ambulancia.accidentado!!.accidente) }
+                ambulancia.desocupar()
+                ambulancia.cambiar_ubicacion(hospital!!.ubicacion)
+                hospital.addPaciente(ambulancia.accidentado!!.nombre)
+            }
+        }
+
+        fun dar_alta_accidentado(codigoHospital: Int, nombrePaciente: String) {
+            var hospital = lista_hospitales.find { it.codigo == codigoHospital }
+            hospital!!.darAltaPaciente(nombrePaciente)
+        }
+
     }
 
 }
