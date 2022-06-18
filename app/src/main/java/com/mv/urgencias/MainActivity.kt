@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         }
         botonActualizarAmbulancia.setOnClickListener{
             try {
-                val intent = Intent(this, ActualizarAmbulancia::class.java)
+                val intent = Intent(this, ActualizarUbicacionAmbulancia::class.java)
                 startActivity(intent)
             } catch (e: Exception) {
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()

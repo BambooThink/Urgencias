@@ -19,7 +19,7 @@
             android:name=".InformarAccidente"
             android:exported="false" />
         <activity
-            android:name=".ActualizarAmbulancia"
+            android:name=".ActualizarUbicacionAmbulancia"
             android:exported="false" />
         <activity
             android:name=".NuevoHospital"

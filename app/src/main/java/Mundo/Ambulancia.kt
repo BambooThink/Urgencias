@@ -3,8 +3,8 @@ package Mundo
 data class Ambulancia(
     var codigo: Int,
     var accidentado: Accidentado?,
-    var estado: String,
-    var ubicacion: UbicacionGeografica) {
+    var estado: String?,
+    var ubicacion: UbicacionGeografica?) {
 
         fun ingresar_accidentado(accidentado: Accidentado) {
             if (this.estado.equals("LIBRE")) {

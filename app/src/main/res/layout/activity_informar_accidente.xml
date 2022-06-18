@@ -59,6 +59,19 @@
             android:hint="Carrera"
             android:inputType="number" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:id="@+id/text_info_punto4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+
         <Button
             android:id="@+id/button_enviar_punto4"
             android:layout_width="match_parent"

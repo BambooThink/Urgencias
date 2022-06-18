@@ -1,6 +1,11 @@
 package Mundo
 
-data class Hospital (var codigo: Int, var nombre: String, var ubicacion: UbicacionGeografica, var accidente1: String, var accidente2: String) : Comparable<Hospital> {
+data class Hospital (
+    var codigo: Int,
+    var nombre: String,
+    var ubicacion: UbicacionGeografica,
+    var accidente1: String,
+    var accidente2: String) : Comparable<Hospital> {
 
     var pacientes: MutableList<String> = mutableListOf()
 
