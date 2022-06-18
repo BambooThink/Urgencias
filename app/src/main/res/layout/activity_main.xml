@@ -6,13 +6,102 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <ScrollView
+        android:layout_width="373dp"
+        android:layout_height="693dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sistema de Información de Urgencias"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="27dp" />
+
+            <Button
+                android:id="@+id/button_1_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresar Info Ambulancia" />
+
+            <Button
+                android:id="@+id/button_2_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresar Info Hospital" />
+
+            <Button
+                android:id="@+id/button_3_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Actualizar Info Ambulancia" />
+
+            <Button
+                android:id="@+id/button_4_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Informar Accidente" />
+
+            <Button
+                android:id="@+id/button_5_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Llevar Accidentado a Hospital" />
+
+            <Button
+                android:id="@+id/button_6_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dar de Alta un Accidentado" />
+
+            <Button
+                android:id="@+id/button_7_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar Todas las Ambulancias" />
+
+            <Button
+                android:id="@+id/button_8_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar Todos los Hospitales" />
+
+            <Button
+                android:id="@+id/button_9_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar Todos los Pacientes" />
+
+            <Button
+                android:id="@+id/button_10_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar Todas las Ambulancias Libres" />
+
+            <Button
+                android:id="@+id/button_11_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar todas las ambulancias ocupadas" />
+
+            <Button
+                android:id="@+id/button_12_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mostrar la info de un hospital" />
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
