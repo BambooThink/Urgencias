@@ -1,6 +1,6 @@
 package Mundo
 
-data class Accidentado (private var nombre: String, private var accidente: String) : Comparable<Accidentado> {
+data class Accidentado (var nombre: String, var accidente: String) : Comparable<Accidentado> {
 
     override fun compareTo(other: Accidentado): Int {
         if (this.nombre > other.nombre)
