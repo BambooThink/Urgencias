@@ -2,32 +2,25 @@ package Mundo
 
 data class Hospital (var codigo: Int, var nombre: String, var ubicacion: UbicacionGeografica, var accidente1: String, var accidente2: String) : Comparable<Hospital> {
 
-    private var pacientes: MutableList<String> = mutableListOf()
-    private var accidentes: MutableList<String> = mutableListOf()
-
-    fun getPacientes() = pacientes
-
-    fun getAccidentes() = accidentes
-
-    fun addPaciente(nombrePaciente: String) {
-        pacientes.add(nombrePaciente)
-    }
-
-    fun addAccidente(nombreAccidente: String) {
-        pacientes.add(nombreAccidente)
-    }
+    var pacientes: MutableList<String> = mutableListOf()
 
     override fun compareTo(other: Hospital): Int {
         if (this.codigo > other.codigo) return 1
         else return -1
     }
 
+    fun addPaciente(nombrePaciente: String) {
+        pacientes.add(nombrePaciente)
+    }
+
     fun consultarPaciente(nombrePaciente: String): Boolean {
         return pacientes.find { it == nombrePaciente } != null
     }
 
-    fun consultarAccidente(nombreAccidente: String): Boolean {
-        return accidentes.find { it == nombreAccidente } != null
+    fun consultarAccidente(nombreAccidente: String): Boolean = when(nombreAccidente) {
+        accidente1 -> true
+        accidente2 -> true
+        else -> false
     }
 
     fun ingresarAccidentado(nombreAccidentado: String, nombreAccidente: String) {
