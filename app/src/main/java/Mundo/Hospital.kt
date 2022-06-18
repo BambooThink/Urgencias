@@ -5,8 +5,11 @@ data class Hospital (var codigo: Int, var nombre: String, var ubicacion: Ubicaci
     var pacientes: MutableList<String> = mutableListOf()
 
     override fun compareTo(other: Hospital): Int {
-        if (this.codigo > other.codigo) return 1
-        else return -1
+        if (this.codigo > other.codigo)
+            return 1
+        else if (other.codigo > this.codigo)
+            return -1
+        else return 0
     }
 
     fun addPaciente(nombrePaciente: String) {
