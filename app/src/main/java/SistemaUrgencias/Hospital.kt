@@ -1,5 +1,7 @@
 package SistemaUrgencias
 
+import ean.collections.TArrayList
+
 data class Hospital (
     var codigo: Int,
     var nombre: String,
@@ -7,7 +9,7 @@ data class Hospital (
     var accidente1: String,
     var accidente2: String) : Comparable<Hospital> {
 
-    var pacientes: MutableList<String> = mutableListOf()
+    var pacientes: TArrayList<Accidentado> = TArrayList()
 
     override fun compareTo(other: Hospital): Int {
         if (this.codigo > other.codigo)
@@ -17,12 +19,12 @@ data class Hospital (
         else return 0
     }
 
-    fun addPaciente(nombrePaciente: String) {
-        pacientes.add(nombrePaciente)
+    fun addPaciente(nombrePaciente: String, accidente: String) {
+        pacientes.add(Accidentado(nombrePaciente, accidente))
     }
 
     fun consultarPaciente(nombrePaciente: String): Boolean {
-        return pacientes.find { it == nombrePaciente } != null
+        return pacientes.find { it.nombre == nombrePaciente } != null
     }
 
     fun consultarAccidente(nombreAccidente: String): Boolean = when(nombreAccidente) {
@@ -33,12 +35,12 @@ data class Hospital (
 
     fun ingresarAccidentado(nombreAccidentado: String, nombreAccidente: String) {
         if (!consultarPaciente(nombreAccidentado) && consultarAccidente(nombreAccidente)) {
-            addPaciente(nombreAccidentado)
+            addPaciente(nombreAccidentado, nombreAccidente)
         }
     }
 
     fun darAltaPaciente(nombrePaciente: String) {
-        pacientes.remove(pacientes.find { it == nombrePaciente})
+        pacientes.removeElement( pacientes.find { it.nombre == nombrePaciente}!! )
     }
 
 }
