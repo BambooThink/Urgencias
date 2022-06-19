@@ -1,9 +1,6 @@
 package com.mv.urgencias
 
-import Mundo.Accidentado
-import Mundo.Ambulancia
-import Mundo.Hospital
-import Mundo.SistemaUrgencias
+import SistemaUrgencias.SistemaUrgencias
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,7 +8,6 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import ean.collections.TArrayList
 
 class LlevarAccidentadoHospital : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

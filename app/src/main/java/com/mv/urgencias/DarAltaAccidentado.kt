@@ -1,7 +1,6 @@
 package com.mv.urgencias
 
-import Mundo.Accidentado
-import Mundo.SistemaUrgencias
+import SistemaUrgencias.SistemaUrgencias
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

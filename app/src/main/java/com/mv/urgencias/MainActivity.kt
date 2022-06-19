@@ -75,7 +75,8 @@ class MainActivity : AppCompatActivity() {
         }
         botonMostrarAmbulancias.setOnClickListener{
             try {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, MostrarAmbulanciasActivity::class.java)
+                intent.putExtra("estado_ambulancia","*")
                 startActivity(intent)
             } catch (e: Exception) {
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
@@ -83,7 +84,7 @@ class MainActivity : AppCompatActivity() {
         }
         botonMostrarHospitales.setOnClickListener{
             try {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, MostrarHospitalesActivity::class.java)
                 startActivity(intent)
             } catch (e: Exception) {
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
@@ -91,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         }
         botonMostrarPacientes.setOnClickListener{
             try {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, MostrarPacientesActivity::class.java)
                 startActivity(intent)
             } catch (e: Exception) {
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
@@ -99,7 +100,8 @@ class MainActivity : AppCompatActivity() {
         }
         botonMostrarAmbulanciasLibres.setOnClickListener{
             try {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, MostrarAmbulanciasActivity::class.java)
+                intent.putExtra("estado_ambulancia","LIBRE")
                 startActivity(intent)
             } catch (e: Exception) {
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
@@ -107,7 +109,8 @@ class MainActivity : AppCompatActivity() {
         }
         botonMostrarAmbulanciasOcupadas.setOnClickListener{
             try {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, MostrarAmbulanciasActivity::class.java)
+                intent.putExtra("estado_ambulancia","OCUPADA")
                 startActivity(intent)
             } catch (e: Exception) {
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
@@ -115,7 +118,7 @@ class MainActivity : AppCompatActivity() {
         }
         botonMostrarHospital.setOnClickListener{
             try {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, MostrarInfoHospitalActivity::class.java)
                 startActivity(intent)
             } catch (e: Exception) {
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()

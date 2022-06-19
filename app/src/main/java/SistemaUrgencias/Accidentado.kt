@@ -1,4 +1,4 @@
-package Mundo
+package SistemaUrgencias
 
 data class Accidentado (var nombre: String, var accidente: String) : Comparable<Accidentado> {
 

@@ -3,17 +3,26 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_actualizar_ambulancia.xml" value="0.17527173913043478" />
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_actualizar_ubicacion_ambulancia.xml" value="0.13903985507246377" />
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_dar_alta_accidentado.xml" value="0.17527173913043478" />
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_informar_accidente.xml" value="0.22" />
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_ingresar_info_ambulancia.xml" value="0.1" />
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_ingresar_nueva_ambulancia.xml" value="0.17527173913043478" />
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_ingresar_nuevo_hospital.xml" value="0.25" />
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_llevar_accidentado_hospital.xml" value="0.17527173913043478" />
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_main.xml" value="0.22" />
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_nueva_ambulancia.xml" value="0.15670289855072464" />
-        <entry key="..\:/Users/Trabajo/Desktop/Curso_Desarrollo_Movil/Apps/urgencias/app/src/main/res/layout/activity_nuevo_hospital.xml" value="0.13903985507246377" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.229" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/drawable/ic_ambulance.xml" value="0.2595" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/drawable/ic_baseline_local_hospital_24.xml" value="0.2595" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/drawable/ic_hospital.xml" value="0.2595" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/drawable/ic_launcher_background.xml" value="0.229" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_actualizar_ubicacion_ambulancia.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_informar_accidente.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_main.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_mostrar_ambulancias.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_mostrar_ambulancias_libres.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_mostrar_ambulancias_ocupadas.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_mostrar_hospitales.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_mostrar_info_hospital.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_mostrar_pacientes.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_nueva_ambulancia.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/item_ambulancia.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/item_ambulancial.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/item_hospital.xml" value="0.21467391304347827" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/item_paciente.xml" value="0.22509057971014493" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.229" />
       </map>
     </option>
   </component>

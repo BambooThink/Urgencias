@@ -1,7 +1,7 @@
 package com.mv.urgencias
 
-import Mundo.SistemaUrgencias
-import Mundo.UbicacionGeografica
+import SistemaUrgencias.SistemaUrgencias
+import SistemaUrgencias.UbicacionGeografica
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

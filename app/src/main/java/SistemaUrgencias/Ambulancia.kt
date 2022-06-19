@@ -1,4 +1,4 @@
-package Mundo
+package SistemaUrgencias
 
 data class Ambulancia(
     var codigo: Int,

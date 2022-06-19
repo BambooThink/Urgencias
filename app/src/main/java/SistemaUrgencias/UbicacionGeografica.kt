@@ -1,4 +1,4 @@
-package Mundo
+package SistemaUrgencias
 
 data class UbicacionGeografica (var calle: Int, var carrera: Int) : Comparable<UbicacionGeografica> {
 

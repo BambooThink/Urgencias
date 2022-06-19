@@ -1,7 +1,6 @@
-package Mundo
+package SistemaUrgencias
 
 import ean.collections.TArrayList
-import ean.collections.min
 
 class SistemaUrgencias {
 
@@ -14,6 +13,8 @@ class SistemaUrgencias {
             if (lista_ambulancias.filter { it.codigo.equals(codigo) }.isEmpty)
                 lista_ambulancias.add(Ambulancia(codigo, null, "LIBRE",
                     UbicacionGeografica(calle, carrera)))
+            else
+                throw Exception("Ambulancia ya existe")
         }
 
         fun agregar_hospital(codigo: Int, nombre: String, calle: Int, carrera: Int, accidente1: String,
@@ -21,19 +22,21 @@ class SistemaUrgencias {
             if (lista_hospitales.filter { it.codigo.equals(codigo) }.isEmpty)
                 lista_hospitales.add(Hospital(codigo, nombre, UbicacionGeografica(calle, carrera), accidente1,
                     accidente2))
+            else
+                throw Exception("Hospital ya existe")
         }
 
         fun ocurrio_accidente(accidentado: Accidentado, calle: Int, carrera: Int): Ambulancia? {
-            var lista_ambulancias_libres = lista_ambulancias.filter { it.estado.equals("LIBRE") }
+            val lista_ambulancias_libres = lista_ambulancias.filter { it.estado.equals("LIBRE") }
             if (lista_ambulancias_libres.isEmpty)
                 return null
-            return lista_ambulancias_libres.minWith(compareBy { calcularEsquemaManhattan(it.ubicacion.calle,
-                                                                    calle, it.ubicacion.carrera, carrera) } )
+            return lista_ambulancias_libres.minWith(compareBy { calcularEsquemaManhattan(it.ubicacion!!.calle,
+                                                                    calle, it.ubicacion!!.carrera, carrera) } )
         }
 
         fun actualizar_ubicacion_ambulancia(codigo: Int, nuevaUbicacion: UbicacionGeografica) {
-            var ambulancia: Ambulancia
-            ambulancia = lista_ambulancias.filter { it.estado.equals("LIBRE") && it.codigo.equals(codigo) }!![0]
+            val ambulancia: Ambulancia
+            ambulancia = lista_ambulancias.filter { it.estado.equals("LIBRE") && it.codigo.equals(codigo) }[0]
             ambulancia.ubicacion = nuevaUbicacion
         }
 
@@ -49,7 +52,7 @@ class SistemaUrgencias {
             if (ambulancia.estado.equals("LIBRE"))
                 return null
 
-            var hospitales_especialidad_accidente =  lista_hospitales
+            val hospitales_especialidad_accidente =  lista_hospitales
                                                     .filter { it.accidente1.equals(ambulancia.accidentado!!.accidente)
                                                             || it.accidente2.equals(ambulancia.accidentado!!.accidente) }
 
@@ -58,15 +61,15 @@ class SistemaUrgencias {
 
             return hospitales_especialidad_accidente
                 .minWith(compareBy { calcularEsquemaManhattan(it.ubicacion.calle,
-                                                                ambulancia.ubicacion.calle,
+                                                                ambulancia.ubicacion!!.calle,
                                                                 it.ubicacion.carrera,
-                                                                ambulancia.ubicacion.carrera) })
+                                                                ambulancia.ubicacion!!.carrera) })
 
         }
 
         fun llegada_ambulancia_hospital(ambulancia: Ambulancia) {
             if (ambulancia.estado.equals("OCUPADA")) {
-                var hospital = lista_hospitales.find { it.consultarAccidente(ambulancia.accidentado!!.accidente) }
+                val hospital = lista_hospitales.find { it.consultarAccidente(ambulancia.accidentado!!.accidente) }
                 ambulancia.desocupar()
                 ambulancia.cambiar_ubicacion(hospital!!.ubicacion)
                 hospital.addPaciente(ambulancia.accidentado!!.nombre)
@@ -74,7 +77,7 @@ class SistemaUrgencias {
         }
 
         fun dar_alta_accidentado(codigoHospital: Int, nombrePaciente: String) {
-            var hospital = lista_hospitales.find { it.codigo == codigoHospital }
+            val hospital = lista_hospitales.find { it.codigo == codigoHospital }
             hospital!!.darAltaPaciente(nombrePaciente)
         }
 

@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Urgencias">
         <activity
+            android:name=".MostrarPacientesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MostrarInfoHospitalActivity"
+            android:exported="false" />
+        <activity
             android:name=".DarAltaAccidentado"
             android:exported="false" />
         <activity
@@ -26,6 +32,12 @@
             android:exported="false" />
         <activity
             android:name=".NuevaAmbulancia"
+            android:exported="false" />
+        <activity
+            android:name=".MostrarHospitalesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MostrarAmbulanciasActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

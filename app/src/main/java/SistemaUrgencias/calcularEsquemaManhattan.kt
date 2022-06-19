@@ -1,4 +1,4 @@
-package Mundo
+package SistemaUrgencias
 
 import kotlin.math.absoluteValue
 
