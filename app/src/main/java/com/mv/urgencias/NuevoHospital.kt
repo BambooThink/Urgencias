@@ -14,7 +14,7 @@ class NuevoHospital : AppCompatActivity() {
         setContentView(R.layout.activity_nuevo_hospital)
 
         var codigoHospital = findViewById<EditText>(R.id.editTextNumber_codigo_punto2)
-        var nombreHospital = findViewById<EditText>(R.id.editTextNumber_nombre_punto2)
+        var nombreHospital = findViewById<EditText>(R.id.editText_nombre_punto2)
         var calle = findViewById<EditText>(R.id.editTextNumber_calle_punto2)
         var carrera = findViewById<EditText>(R.id.editTextNumber_carrera_punto2)
         var accidente1 = findViewById<EditText>(R.id.editText_accidente1_punto2)

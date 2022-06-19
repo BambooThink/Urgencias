@@ -20,19 +20,27 @@ class LlevarAccidentadoHospital : AppCompatActivity() {
         var botonRegresar = findViewById<Button>(R.id.button_regresar_punto5)
 
         botonEnviar.setOnClickListener{
-            try {
+//            try {
                 val ambulancia = SistemaUrgencias.lista_ambulancias.find {
-                    it.codigo == codigoAmbulancia.text.toString().toInt() }
-                if (ambulancia!!.estado.equals("OCUPADA")) {
-                    val hospital = SistemaUrgencias.buscar_hospital_para_ambulancia(ambulancia)!!
-                    val texto = "Código Hospital: ${hospital.codigo}, Nombre ${hospital.nombre}"
-                    informacion.text = texto
-                    SistemaUrgencias.llegada_ambulancia_hospital(ambulancia)
-                    Toast.makeText(this, "Se llevó al accidentado", Toast.LENGTH_LONG).show()
+                                        it.codigo == codigoAmbulancia.text.toString().toInt() }
+
+                if (ambulancia != null) {
+                    if (ambulancia!!.estado.equals("OCUPADA")) {
+
+                        val hospital = SistemaUrgencias.buscar_hospital_para_ambulancia(ambulancia)
+
+                        if (hospital != null) {
+                            val texto = "Código Hospital: ${hospital.codigo}, Nombre ${hospital.nombre}"
+                            informacion.text = texto
+                            SistemaUrgencias.llegada_ambulancia_hospital(ambulancia)
+                            Toast.makeText(this, "Se llevó al accidentado", Toast.LENGTH_LONG).show()
+                        }
+
+                    }
                 }
-            } catch (e: Exception) {
-                Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
-            }
+//            } catch (e: Exception) {
+//                Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
+//            }
         }
 
         botonRegresar.setOnClickListener{

@@ -15,8 +15,8 @@ class InformarAccidente : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_informar_accidente)
 
-        var nombreAccidentado = findViewById<EditText>(R.id.editTextNumber_accidentado_punto4)
-        var nombreAccidente = findViewById<EditText>(R.id.editTextNumber_accidente_punto4)
+        var nombreAccidentado = findViewById<EditText>(R.id.editText_accidentado_punto4)
+        var nombreAccidente = findViewById<EditText>(R.id.editText_accidente_punto4)
         var calle = findViewById<EditText>(R.id.editTextNumber_calle_punto4)
         var carrera = findViewById<EditText>(R.id.editTextNumber_carrera_punto4)
         var informacion = findViewById<TextView>(R.id.text_info_punto4)

@@ -36,12 +36,12 @@
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editTextNumber_nombre_punto2"
+            android:id="@+id/editText_nombre_punto2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nombre"
-            android:inputType="number" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/editTextNumber_calle_punto2"

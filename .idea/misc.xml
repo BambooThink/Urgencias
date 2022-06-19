@@ -9,6 +9,7 @@
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/drawable/ic_hospital.xml" value="0.2595" />
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/drawable/ic_launcher_background.xml" value="0.229" />
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_actualizar_ubicacion_ambulancia.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_dar_alta_accidentado.xml" value="0.12447916666666667" />
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_informar_accidente.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_main.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_mostrar_ambulancias.xml" value="0.22509057971014493" />
@@ -18,6 +19,7 @@
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_mostrar_info_hospital.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_mostrar_pacientes.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_nueva_ambulancia.xml" value="0.19701086956521738" />
+        <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/activity_nuevo_hospital.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/item_ambulancia.xml" value="0.22509057971014493" />
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/item_ambulancial.xml" value="0.22509057971014493" />
         <entry key="..\:/Users/Diego/Documents/Development/Desarrollo Movil/AndroidStudio/Urgencias/app/src/main/res/layout/item_hospital.xml" value="0.21467391304347827" />

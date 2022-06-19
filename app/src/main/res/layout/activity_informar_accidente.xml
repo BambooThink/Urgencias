@@ -28,20 +28,20 @@
             android:layout_height="35dp" />
 
         <EditText
-            android:id="@+id/editTextNumber_accidentado_punto4"
+            android:id="@+id/editText_accidentado_punto4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nombre del Accidentado"
-            android:inputType="number" />
+            android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editTextNumber_accidente_punto4"
+            android:id="@+id/editText_accidente_punto4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Nombre del Accidente"
-            android:inputType="number" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/editTextNumber_calle_punto4"

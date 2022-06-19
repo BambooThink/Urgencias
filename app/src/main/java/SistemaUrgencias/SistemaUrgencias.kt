@@ -31,19 +31,21 @@ class SistemaUrgencias {
             if (lista_ambulancias_libres.isEmpty)
                 return null
             return lista_ambulancias_libres.minWith(compareBy { calcularEsquemaManhattan(it.ubicacion!!.calle,
-                                                                    calle, it.ubicacion!!.carrera, carrera) } )
+                                                                    it.ubicacion!!.carrera, calle, carrera) } )
         }
 
         fun actualizar_ubicacion_ambulancia(codigo: Int, nuevaUbicacion: UbicacionGeografica) {
-            val ambulancia: Ambulancia
-            ambulancia = lista_ambulancias.filter { it.estado.equals("LIBRE") && it.codigo.equals(codigo) }[0]
-            ambulancia.ubicacion = nuevaUbicacion
+            val ambulancia: Ambulancia?
+            ambulancia = lista_ambulancias.find { it.estado.equals("LIBRE") && it.codigo.equals(codigo) }
+            if (ambulancia != null)
+                ambulancia.ubicacion = nuevaUbicacion
+            else
+                throw Exception("Ambulancia ocupada o no existe")
         }
 
         fun asignar_accidentado_a_ambulancia(accidentado: Accidentado, ambulancia: Ambulancia) {
             if (ambulancia.estado.equals("LIBRE")){
-                ambulancia.accidentado = accidentado
-                ambulancia.estado = "OCUPADA"
+                ambulancia.ingresar_accidentado(accidentado)
             }
         }
 
@@ -61,8 +63,8 @@ class SistemaUrgencias {
 
             return hospitales_especialidad_accidente
                 .minWith(compareBy { calcularEsquemaManhattan(it.ubicacion.calle,
-                                                                ambulancia.ubicacion!!.calle,
                                                                 it.ubicacion.carrera,
+                                                                ambulancia.ubicacion!!.calle,
                                                                 ambulancia.ubicacion!!.carrera) })
 
         }
@@ -70,9 +72,17 @@ class SistemaUrgencias {
         fun llegada_ambulancia_hospital(ambulancia: Ambulancia) {
             if (ambulancia.estado.equals("OCUPADA")) {
                 val hospital = lista_hospitales.find { it.consultarAccidente(ambulancia.accidentado!!.accidente) }
-                ambulancia.desocupar()
-                ambulancia.cambiar_ubicacion(hospital!!.ubicacion)
-                hospital.addPaciente(ambulancia.accidentado!!.nombre)
+                if (hospital != null) {
+                    hospital.ingresarAccidentado(ambulancia.accidentado!!.nombre, ambulancia.accidentado!!.accidente)
+                    ambulancia.desocupar()
+                    ambulancia.cambiar_ubicacion(hospital!!.ubicacion)
+                }
+                else {
+                    throw Exception("No hay hospital para ${ambulancia.accidentado!!.accidente}")
+                }
+            }
+            else {
+                throw Exception("Ambulancia Libre")
             }
         }
 

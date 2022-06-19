@@ -15,7 +15,7 @@ class DarAltaAccidentado : AppCompatActivity() {
         setContentView(R.layout.activity_dar_alta_accidentado)
 
         var codigoHospital = findViewById<EditText>(R.id.editTextNumber_codigo_hospital_punto6)
-        var nombrePaciente = findViewById<EditText>(R.id.editTextNumber_nombre_paciente_punto6)
+        var nombrePaciente = findViewById<EditText>(R.id.editText_nombre_paciente_punto6)
         var informacion = findViewById<TextView>(R.id.text_info_punto6)
         var botonEnviar = findViewById<Button>(R.id.button_enviar_punto6)
         var botonRegresar = findViewById<Button>(R.id.button_regresar_punto6)
