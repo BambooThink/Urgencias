@@ -11,14 +11,33 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/pt_title_hospitalInfo"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="textPersonName"
-            android:text="Informacion de Hospital" />
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_atras_infoHospital"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:contentDescription="atras"
+                app:srcCompat="@drawable/back_arrow" />
+
+            <EditText
+                android:id="@+id/pt_title_hospitalInfo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="Informacion de Hospital" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -46,7 +65,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="20dp" />
+            android:layout_height="50dp" />
 
         <TextView
             android:id="@+id/tv_nombre_hospitalInfo"

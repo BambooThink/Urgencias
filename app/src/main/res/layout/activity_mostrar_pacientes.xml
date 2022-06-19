@@ -12,14 +12,29 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/pt_title_pacientes"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="textPersonName"
-            android:text="Pacientes en el Hospital" />
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_atras_pacientes"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:contentDescription="atras"
+                app:srcCompat="@drawable/back_arrow" />
+
+            <EditText
+                android:id="@+id/pt_title_pacientes"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="textPersonName"
+                android:text="Pacientes en el Hospital" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"

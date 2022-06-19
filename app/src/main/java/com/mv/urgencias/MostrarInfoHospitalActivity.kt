@@ -1,12 +1,10 @@
 package com.mv.urgencias
 
 import SistemaUrgencias.SistemaUrgencias
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 
 class MostrarInfoHospitalActivity : AppCompatActivity() {
 
@@ -16,6 +14,7 @@ class MostrarInfoHospitalActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_mostrar_info_hospital)
 
+            val btn_atras = findViewById<ImageView>(R.id.ib_atras_infoHospital)
             val btn_buscar = findViewById<Button>(R.id.bt_buscar_hospitalInfo)
 
             val txt_codigo = findViewById<EditText>(R.id.tn_codigo_hospitalInfo)
@@ -23,6 +22,11 @@ class MostrarInfoHospitalActivity : AppCompatActivity() {
             val txt_direccion = findViewById<TextView>(R.id.tv_direccion_hospitalInfo)
             val txt_especialidad1 = findViewById<TextView>(R.id.tv_especialidad1_hospitalInfo)
             val txt_especialidad2 = findViewById<TextView>(R.id.tv_especialidad2_hospitalInfo)
+
+            btn_atras.setOnClickListener {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
 
             btn_buscar.setOnClickListener {
                 val codigo = txt_codigo.text.toString().toInt()
