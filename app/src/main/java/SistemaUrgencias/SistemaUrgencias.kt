@@ -27,11 +27,13 @@ class SistemaUrgencias {
         }
 
         fun ocurrio_accidente(accidentado: Accidentado, calle: Int, carrera: Int): Ambulancia? {
-            val lista_ambulancias_libres = lista_ambulancias.filter { it.estado.equals("LIBRE") }
+            val lista_ambulancias_libres = lista_ambulancias!!.filter { it.estado.equals("LIBRE") }
+            var ambulancia: Ambulancia?
             if (lista_ambulancias_libres.isEmpty)
-                return null
-            return lista_ambulancias_libres.minWith(compareBy { calcularEsquemaManhattan(it.ubicacion!!.calle,
-                                                                    it.ubicacion!!.carrera, calle, carrera) } )
+                ambulancia = null
+            ambulancia =  lista_ambulancias_libres.minWith(compareBy { calcularEsquemaManhattan(it.ubicacion!!.calle,
+                                                                            it.ubicacion!!.carrera, calle, carrera) } )
+            return ambulancia
         }
 
         fun actualizar_ubicacion_ambulancia(codigo: Int, nuevaUbicacion: UbicacionGeografica) {
@@ -61,7 +63,10 @@ class SistemaUrgencias {
             if (hospitales_especialidad_accidente.isEmpty)
                 return null
 
-            return hospitales_especialidad_accidente
+            val hospitales_disponibles = hospitales_especialidad_accidente.
+                                            filter { it.pacientes.find { it.nombre == ambulancia.accidentado!!.nombre } == null }
+
+            return hospitales_disponibles
                 .minWith(compareBy { calcularEsquemaManhattan(it.ubicacion.calle,
                                                                 it.ubicacion.carrera,
                                                                 ambulancia.ubicacion!!.calle,
@@ -70,25 +75,27 @@ class SistemaUrgencias {
         }
 
         fun llegada_ambulancia_hospital(ambulancia: Ambulancia) {
-            if (ambulancia.estado.equals("OCUPADA")) {
-                val hospital = lista_hospitales.find { it.consultarAccidente(ambulancia.accidentado!!.accidente) }
-                if (hospital != null) {
-                    hospital.ingresarAccidentado(ambulancia.accidentado!!.nombre, ambulancia.accidentado!!.accidente)
-                    ambulancia.desocupar()
-                    ambulancia.cambiar_ubicacion(hospital!!.ubicacion)
-                }
-                else {
-                    throw Exception("No hay hospital para ${ambulancia.accidentado!!.accidente}")
-                }
-            }
-            else {
+
+            if (ambulancia.estado.equals("LIBRE"))
                 throw Exception("Ambulancia Libre")
-            }
+            val hospital = lista_hospitales.find { it.consultarAccidente(ambulancia.accidentado!!.accidente) }
+            if (hospital == null)
+                throw Exception("No hay hospital para ${ambulancia.accidentado!!.accidente}")
+            hospital.ingresarAccidentado(ambulancia.accidentado!!.nombre, ambulancia.accidentado!!.accidente)
+            ambulancia.desocupar()
+            ambulancia.cambiar_ubicacion(hospital!!.ubicacion)
         }
 
         fun dar_alta_accidentado(codigoHospital: Int, nombrePaciente: String) {
+
             val hospital = lista_hospitales.find { it.codigo == codigoHospital }
-            hospital!!.darAltaPaciente(nombrePaciente)
+            if (hospital == null)
+                throw Exception("Hospital no encontrado")
+            val paciente = hospital.pacientes.find { it.nombre == nombrePaciente }
+            if (paciente == null)
+                throw Exception("Paciente no encontrado")
+            hospital.darAltaPaciente(nombrePaciente)
+
         }
 
     }

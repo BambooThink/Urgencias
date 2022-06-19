@@ -1,6 +1,7 @@
 package com.mv.urgencias
 
 import SistemaUrgencias.Accidentado
+import SistemaUrgencias.Ambulancia
 import SistemaUrgencias.SistemaUrgencias
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -26,11 +27,18 @@ class InformarAccidente : AppCompatActivity() {
         botonEnviar.setOnClickListener{
             try {
                 var accidentado = Accidentado(nombreAccidentado.text.toString(), nombreAccidente.text.toString())
-                val ambulancia = SistemaUrgencias.ocurrio_accidente(accidentado, calle.text.toString().toInt(),
-                carrera.text.toString().toInt())!!
+
+                var ambulancia: Ambulancia?
+                ambulancia = SistemaUrgencias.ocurrio_accidente(accidentado, calle.text.toString().toInt(),
+                                                                    carrera.text.toString().toInt())
+
+                if (ambulancia == null)
+                    throw Exception("No hay ambulancias disponibles")
+
                 SistemaUrgencias.asignar_accidentado_a_ambulancia(accidentado, ambulancia)
                 informacion.text = "El código de la ambulancia es ${ambulancia.codigo}"
                 Toast.makeText(this, "Se informó accidente", Toast.LENGTH_LONG).show()
+
             } catch (e: Exception) {
                 Toast.makeText(this, e.message, Toast.LENGTH_LONG).show()
             }

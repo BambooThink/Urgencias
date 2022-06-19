@@ -22,8 +22,7 @@ class DarAltaAccidentado : AppCompatActivity() {
 
         botonEnviar.setOnClickListener{
             try {
-                SistemaUrgencias.dar_alta_accidentado(codigoHospital.text.toString().toInt(),
-                nombrePaciente.text.toString())
+                SistemaUrgencias.dar_alta_accidentado(codigoHospital.text.toString().toInt(), nombrePaciente.text.toString())
                 informacion.text = "La operación fue posible"
                 Toast.makeText(this, "Se dio de alta al paciente", Toast.LENGTH_LONG).show()
             } catch (e: Exception) {
