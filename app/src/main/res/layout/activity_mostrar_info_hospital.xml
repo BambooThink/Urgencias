@@ -25,14 +25,13 @@
                 android:contentDescription="atras"
                 app:srcCompat="@drawable/back_arrow" />
 
-            <EditText
-                android:id="@+id/pt_title_hospitalInfo"
+            <TextView
+                android:id="@+id/tv_title_hospitalInfo"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
-                android:ems="10"
                 android:gravity="center"
-                android:inputType="textPersonName"
-                android:text="Informacion de Hospital" />
+                android:text="Informacion de Hospital"
+                android:textSize="28sp" />
         </LinearLayout>
 
         <Space
